@@ -13,6 +13,9 @@ Whenever flight status is changed, the code automatically detects the change usi
 
 No need to reload the site, this microservice uses kafka and mongodb replica sets to display real time updates on the website! Whenever the database is changed, the code automatically detects the changes, the frontend uses polling mechanism to fetch the updated changes , everything is automatic!
 
+### Architecture
+![image](https://github.com/user-attachments/assets/2ed8bb51-5d50-4a9d-bc56-70fbabbd0f5c)
+
 ### Flights collection in mongodb
 ![image](https://github.com/user-attachments/assets/9fa9e65b-92f5-46fc-a8fb-3d43f62c25ed)
 ### users database collection in mongodb
