@@ -2,13 +2,16 @@
 
 Welcome to the **Notifications Microservice** repository! This microservice handles notifications for various events and provides an API for clients to interact with.
 ![image](https://github.com/user-attachments/assets/942dfbb3-fe2f-46ff-9a74-b9116082cbc2)
+
+###EMAIL NOTIFICATIONS
 ![image](https://github.com/user-attachments/assets/342d4970-7b8f-44b6-94fc-efe2dca7dd27)
 
-REAL TIME UPDATES!
+No need to reload the site, this microservice uses kafka and mongodb replica sets to display real time updates on the website! Whenever the database is changed, the code automatically detects the change, the backend checks the user database and sends email to the users who have booked the same flight on that particular date, Everything is automated!
+
+### REAL TIME UPDATES!
 ![image](https://github.com/user-attachments/assets/b6e43316-bb89-4d84-916e-6bda19e0f4ed)
-No need to reload the site, this microservice uses kafka and mongodb replica sets to display real time updates on the website!
 
-
+No need to reload the site, this microservice uses kafka and mongodb replica sets to display real time updates on the website! Whenever the database is changed, the code automatically detects the changes, the frontend uses polling mechanism to fetch the updated changes , everything is automatic!
 
 ### Architecture Overview
 
