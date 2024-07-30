@@ -7,6 +7,11 @@ Welcome to the **Notifications Microservice** repository! This microservice hand
 ![image](https://github.com/user-attachments/assets/342d4970-7b8f-44b6-94fc-efe2dca7dd27)
 
 Whenever flight status is changed, the code automatically detects the change using kafka, the backend checks the users database and sends email to the users who have booked the same flight on that particular date, Everything is automated!
+### Flights database
+![image](https://github.com/user-attachments/assets/9fa9e65b-92f5-46fc-a8fb-3d43f62c25ed)
+### users database
+![image](https://github.com/user-attachments/assets/d9753cf5-2418-41d9-bb65-e647f0f2f795)
+
 
 ### REAL TIME UPDATES!
 ![image](https://github.com/user-attachments/assets/b6e43316-bb89-4d84-916e-6bda19e0f4ed)
