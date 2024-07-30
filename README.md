@@ -31,7 +31,7 @@ No need to reload the site, this microservice uses kafka and mongodb replica set
 - **Backend**: Processes the change stream and sends messages to Kafka.
 - **Kafka Producer**: Sends messages to Kafka topics.
 - **Kafka Consumer**: Consumes messages from Kafka topics.
-- **Frontend**: Uses API polling to fetch updates and displays real-time notifications.
+- **Frontend**: Uses API polling to fetch updates and displays real-time notifications and flight status updates.
 - **Email Service**: Sends email notifications as part of the notification workflow.
 
 ### File Structure
