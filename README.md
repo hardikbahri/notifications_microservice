@@ -184,71 +184,6 @@ To get started with the Notifications Microservice, follow these steps:
 
    The microservice will be accessible at `http://localhost:5002` by default.
 
-## API Endpoints
-
-Here are some example API endpoints:
-
-- **Send Notification**
-
-  ```http
-  POST /update
-  ```
-
-  **Request Body**:
-
-  ```json
-  {
-    "type": "email",
-    "message": "Your account has been updated."
-  }
-  ```
-
-  **Response**:
-
-  ```json
-  {
-    "status": "success",
-    "message": "Notification sent successfully."
-  }
-  ```
-
-- **Get Notifications**
-
-  ```http
-  GET /update
-  ```
-
-  **Response**:
-
-  ```json
-  [
-    {
-      "id": 1,
-      "type": "email",
-      "message": "Your account has been updated."
-    }
-  ]
-  ```
-
-## Configuration
-
-- **Environment Variables**: Ensure you have configured environment variables as specified in the `.env` file.
-- **Database Configuration**: Set up your database connection in the configuration file.
-
-## Testing
-
-To run tests for the microservice, use:
-
-```bash
-pytest
-```
-
-Ensure you have `pytest` installed:
-
-```bash
-pip install pytest
-```
-
 ## Contributing
 
 Contributions are welcome! To contribute:
@@ -261,7 +196,3 @@ Contributions are welcome! To contribute:
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to further customize the README based on your specific needs and details. Let me know if you need any additional information or help!
