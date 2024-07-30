@@ -50,12 +50,10 @@ Sure, here’s a detailed README that explains the process using the architectur
 
 1. **Flask Setup**: The Flask app is set up with CORS enabled for the `/update` endpoint.
 2. **MongoDB Connection**: Connects to MongoDB to access the flight status and user information.
-3. **Twilio Setup**: Configures Twilio for sending SMS notifications.
-4. **Email Function**: Defines a function to send email notifications using SMTP.
-5. **SMS Function**: Defines a function to send SMS notifications using Twilio.
-6. **Notification Function**: Combines email and SMS notifications and sends them to users based on flight updates.
-7. **Kafka Consumer**: Listens to the `flight_updates` topic on Kafka and processes messages to notify users.
-8. **API Endpoint**: Provides an endpoint to fetch the latest flight update.
+3. **Email Function**: Defines a function to send email notifications using SMTP.
+4. **Notification Function**: Combines email and SMS notifications and sends them to users based on flight updates.
+5. **Kafka Consumer**: Listens to the `flight_updates` topic on Kafka and processes messages to notify users.
+6. **API Endpoint**: Provides an endpoint to fetch the latest flight update.
 
 #### Kafka Producer (`notify_users.py`)
 
