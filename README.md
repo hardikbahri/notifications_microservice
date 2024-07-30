@@ -1,16 +1,26 @@
 # Notifications Microservice
 
+Features:
+-Integration with Airport Systems: Pull data from custom-created MongoDB airport database to show flight status
+-Real-time push notifications for flight status changes.
+-Real-time flight status update without the need to reload.
+-Real-time automated email alerts for updates.
+-All these features get automatically implemented by inserting/updating/deleting entries in DB.
+-Scalable architecture with MongoDB replica sets and Kafka.
+-User-friendly React interface.
+-Microservices architecture
+
 ![image](https://github.com/user-attachments/assets/942dfbb3-fe2f-46ff-9a74-b9116082cbc2)
 
 ### EMAIL NOTIFICATIONS
 ![image](https://github.com/user-attachments/assets/342d4970-7b8f-44b6-94fc-efe2dca7dd27)
 
-Whenever flight status is changed, the code automatically detects the change using kafka, the backend checks the users database and sends email to the users who have booked the same flight on that particular date, Everything is automated
+Whenever flight status is changed in the database, the code automatically detects the change using kafka and MongoDB replica sets, the backend checks the users database and sends emails to the users who have booked the same flight on that particular date, Everything is automated
 
-### REAL TIME UPDATES!
+### REAL TIME UPDATES AND PUSH NOTIFICATIONS!
 ![image](https://github.com/user-attachments/assets/b6e43316-bb89-4d84-916e-6bda19e0f4ed)
 
-No need to reload the site, this microservice uses kafka and mongodb replica sets to display real time updates on the website! Whenever the database is changed, the code automatically detects the changes, the frontend uses polling mechanism to fetch the updated changes , everything is automatic!
+No need to reload the site, this microservice uses kafka and mongodb replica sets to display real-time updates on the website! Whenever the database is changed, the code automatically detects the changes, the frontend uses polling mechanism to fetch the updated changes also displays a push notification on the site, everything is automatic!
 
 ### Architecture
 ![image](https://github.com/user-attachments/assets/2ed8bb51-5d50-4a9d-bc56-70fbabbd0f5c)
@@ -28,9 +38,10 @@ No need to reload the site, this microservice uses kafka and mongodb replica set
 4. **Send Message**: The backend sends a message to the Kafka Producer.
 5. **Send Topics**: The Kafka Producer sends the message to the appropriate Kafka topic.
 6. **Consumer Message**: The Kafka Consumer receives the message from the Kafka topic.
-7. **API Call Using Polling Mechanism**: The frontend makes an API call to the backend using a polling mechanism to get updates.
-8. **Real-Time Updates, Push Notifications**: The frontend receives real-time updates and push notifications.
-9. **Email Sent**: An email is sent as part of the notification process.
+7. **Process consumer messages**: Backend processes the updates and fetches the users affected with the update from users collection in the database 
+8. **API Call Using Polling Mechanism**: The front end makes an API call to the backend using a polling mechanism to get updates.
+9. **Real-Time Updates, Push Notifications**: The frontend receives real-time updates and push notifications.
+10. **Email Sent**: An email is sent as part of the notification process.
 
 ### Components
 
