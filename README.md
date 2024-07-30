@@ -3,10 +3,10 @@ This project manages and delivers real-time flight updates and notifications usi
 
 ## Features
 - **Integration with Airport Systems:** Pull data from a custom-created MongoDB airport database to display flight status.
+- **Automatic Implementation:** All features are triggered by database actions (insert/update/delete).
 - **Real-Time Push Notifications:** Automatically send notifications for flight status changes.
 - **Real-Time Flight Status Updates:** Display updates without the need for page reloads.
 - **Automated Email Alerts:** Send real-time email alerts for updates, uses SMTP.
-- **Automatic Implementation:** Features are triggered by database actions (insert/update/delete).
 - **Scalable Architecture:** Utilizes MongoDB replica sets and Kafka for high availability and scalability.
 - **User-Friendly Interface:** Built with React for a seamless user experience.
 
