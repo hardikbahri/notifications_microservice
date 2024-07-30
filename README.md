@@ -2,22 +2,6 @@
 
 Welcome to the **Notifications Microservice** repository! This microservice handles notifications for various events and provides an API for clients to interact with.
 
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Configuration](#configuration)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-Sure, here’s a detailed README that explains the process using the architecture diagram and mentions the relevant files without including the complete code:
-
----
-
-
-
 ### Architecture Overview
 
 1. **Database Change Detected**: A change in the MongoDB database (e.g., a flight status update) is detected.
