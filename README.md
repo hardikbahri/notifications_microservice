@@ -143,7 +143,7 @@ Here are some example API endpoints:
 - **Get Notifications**
 
   ```http
-  GET /notifications
+  GET /update
   ```
 
   **Response**:
