@@ -114,7 +114,7 @@ To get started with the Notifications Microservice, follow these steps:
 
 4. **Access the API**
 
-   The microservice will be accessible at `http://localhost:5000` by default.
+   The microservice will be accessible at `http://localhost:5002` by default.
 
 ## API Endpoints
 
@@ -123,7 +123,7 @@ Here are some example API endpoints:
 - **Send Notification**
 
   ```http
-  POST /notifications
+  POST /update
   ```
 
   **Request Body**:
