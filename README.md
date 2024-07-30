@@ -1,6 +1,5 @@
 # Notifications Microservice
 
-Welcome to the **Notifications Microservice** repository! This microservice handles notifications for various events and provides an API for clients to interact with.
 ![image](https://github.com/user-attachments/assets/942dfbb3-fe2f-46ff-9a74-b9116082cbc2)
 
 ### EMAIL NOTIFICATIONS
