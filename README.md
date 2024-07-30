@@ -96,16 +96,9 @@ To get started with the Notifications Microservice, follow these steps:
    pip install -r requirements.txt
    ```
 
-3. **Set Up Environment Variables**
+3. **Set Up Kafka and MongoDB replica sets**
 
-   Create a `.env` file in the root directory and set up the necessary environment variables. Example:
-
-   ```
-   DATABASE_URL=your_database_url
-   KAFKA_BROKER_URL=your_kafka_broker_url
-   ```
-
-## Usage
+  ## Usage
 
 1. **Start Kafka**
 
