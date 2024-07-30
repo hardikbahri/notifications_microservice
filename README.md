@@ -77,6 +77,24 @@ No need to reload the site, this microservice uses kafka and mongodb replica set
 2. **Kafka Setup**: Configures Kafka producer to send messages to the `flight_updates` topic.
 3. **Process Change Function**: Processes the change stream from MongoDB.
 
+# Libraries Used
+
+This project uses a variety of Python libraries for backend development, Kafka integration, MongoDB operations, and real-time communication. Below are the key libraries utilized:
+
+- **Flask**: A lightweight WSGI web application framework for Python, used for creating the backend server.
+- **KafkaConsumer**: A library from the `kafka-python` package used to consume messages from Kafka topics.
+- **KafkaProducer**: A library from the `kafka-python` package used to produce messages to Kafka topics.
+- **pymongo**: A MongoDB driver for Python, used for connecting and interacting with MongoDB databases.
+- **datetime**: A module for manipulating dates and times, used here to manage and store timestamp information.
+- **smtplib**: A Python library used to send email via the Simple Mail Transfer Protocol (SMTP).
+- **email.mime**: Modules for constructing email messages, including `MIMEText` and `MIMEMultipart` for creating different parts of an email.
+- **twilio**: A library used for sending SMS messages via the Twilio API.
+- **flask_cors**: A Flask extension for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible.
+- **flask_socketio**: An extension for Flask that enables WebSocket communication for real-time bi-directional communication between clients and servers.
+- **bson.json_util**: A utility for converting between BSON (Binary JSON) and JSON, specifically used with MongoDB data.
+- **json**: A built-in library for parsing JSON (JavaScript Object Notation), a common data format for APIs.
+- **threading**: A built-in module for creating and managing threads, used here to handle concurrent operations.
+
 
 ## Installation
 
