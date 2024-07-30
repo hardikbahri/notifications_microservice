@@ -72,8 +72,8 @@ No need to reload the site, this microservice uses kafka and mongodb replica set
 
 1. **MongoDB Connection**: Connects to MongoDB to watch for changes in the flights collection.
 2. **Kafka Setup**: Configures Kafka producer to send messages to the `flight_updates` topic.
-3. **Process Change Function**: Processes the change stream from MongoDB and sends relevant updates to Kafka.
-4. **Change Stream Listener**: Listens to changes in the flights collection and processes them.
+3. **Process Change Function**: Processes the change stream from MongoDB.
+
 
 ## Installation
 
@@ -100,7 +100,7 @@ To get started with the Notifications Microservice, follow these steps:
 
 1. **Start Kafka**
 
-   To start Kafka, you need to run Zookeeper and Kafka servers:
+   To start Kafka, you need to run Zookeeper and Kafka servers in the Kafka folder:
 
    ```bash
    # Start Zookeeper
@@ -148,18 +148,18 @@ To get started with the Notifications Microservice, follow these steps:
    Start the microservice using:
 
    ```bash
-   python app.py
+   python change_streams.py
    ```
-
-   or, if you use a specific entry point:
 
    ```bash
-   flask run
+   python notify_users.py
    ```
+
+  
 
 4. **Access the API**
 
-   The microservice will be accessible at `http://localhost:5002` by default.
+   The microservice will be accessible at `http://localhost:5002` by default in /update endpoint.
 
 ## Contributing
 
