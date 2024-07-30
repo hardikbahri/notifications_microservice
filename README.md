@@ -64,33 +64,6 @@ No need to reload the site, this microservice uses kafka and mongodb replica set
 3. **Process Change Function**: Processes the change stream from MongoDB and sends relevant updates to Kafka.
 4. **Change Stream Listener**: Listens to changes in the flights collection and processes them.
 
-### Running the Application
-
-1. **Start MongoDB**: Ensure MongoDB is running locally.
-2. **Start Kafka**: Ensure Kafka is running locally.
-3. **Run Kafka Producer**: 
-   ```sh
-   python producer.py
-   ```
-4. **Run Flask App**:
-   ```sh
-   python app.py
-   ```
-5. **Frontend**: Make API calls to the `/update` endpoint to fetch the latest flight updates.
-
-### Conclusion
-
-This notification microservice efficiently processes flight status updates and notifies users in real-time via email and SMS. The combination of MongoDB, Kafka, and Flask provides a robust and scalable solution for real-time notifications.
-
----
-
-This README provides a clear overview of the architecture and the workflow, with references to the relevant files without including the entire code.
-## Features
-
-- Real-time notification delivery
-- Integration with Kafka for event streaming
-- MongoDB replica set for database high availability
-
 ## Installation
 
 To get started with the Notifications Microservice, follow these steps:
