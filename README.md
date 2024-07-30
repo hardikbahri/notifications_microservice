@@ -1,14 +1,16 @@
 # Notifications Microservice
+# Flight Info and Notifications Microservices
 
-Features:
--Integration with Airport Systems: Pull data from custom-created MongoDB airport database to show flight status
--Real-time push notifications for flight status changes.
--Real-time flight status update without the need to reload.
--Real-time automated email alerts for updates.
--All these features get automatically implemented by inserting/updating/deleting entries in DB.
--Scalable architecture with MongoDB replica sets and Kafka.
--User-friendly React interface.
--Microservices architecture
+This project manages and delivers real-time flight updates and notifications using a microservices architecture. The system is built with React for the frontend, Flask for the backend, MongoDB for data storage, and Kafka for real-time data streaming.
+
+## Features
+- **Integration with Airport Systems:** Pull data from a custom-created MongoDB airport database to display flight status.
+- **Real-Time Push Notifications:** Automatically send notifications for flight status changes.
+- **Real-Time Flight Status Updates:** Display updates without the need for page reloads.
+- **Automated Email Alerts:** Send real-time email alerts for significant updates.
+- **Automatic Implementation:** Features are triggered by database actions (insert/update/delete).
+- **Scalable Architecture:** Utilizes MongoDB replica sets and Kafka for high availability and scalability.
+- **User-Friendly Interface:** Built with React for a seamless user experience.
 
 ![image](https://github.com/user-attachments/assets/942dfbb3-fe2f-46ff-9a74-b9116082cbc2)
 
