@@ -1,7 +1,3 @@
-Here's an updated GitHub README with details on how to set up and run the Kafka and MongoDB components for your notifications microservice:
-
----
-
 # Notifications Microservice
 
 Welcome to the **Notifications Microservice** repository! This microservice handles notifications for various events and provides an API for clients to interact with.
