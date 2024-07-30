@@ -12,7 +12,79 @@ Welcome to the **Notifications Microservice** repository! This microservice hand
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
+Sure, here’s a detailed README that explains the process using the architecture diagram and mentions the relevant files without including the complete code:
 
+---
+
+
+
+### Architecture Overview
+
+1. **Database Change Detected**: A change in the MongoDB database (e.g., a flight status update) is detected.
+2. **Change Received**: The backend service receives the change.
+3. **Process Change Stream**: The backend processes the change stream.
+4. **Send Message**: The backend sends a message to the Kafka Producer.
+5. **Send Topics**: The Kafka Producer sends the message to the appropriate Kafka topic.
+6. **Consumer Message**: The Kafka Consumer receives the message from the Kafka topic.
+7. **API Call Using Polling Mechanism**: The frontend makes an API call to the backend using a polling mechanism to get updates.
+8. **Real-Time Updates, Push Notifications**: The frontend receives real-time updates and push notifications.
+9. **Email Sent**: An email is sent as part of the notification process.
+
+### Components
+
+- **MongoDB**: Acts as the database where changes are detected.
+- **Backend**: Processes the change stream and sends messages to Kafka.
+- **Kafka Producer**: Sends messages to Kafka topics.
+- **Kafka Consumer**: Consumes messages from Kafka topics.
+- **Frontend**: Uses API polling to fetch updates and displays real-time notifications.
+- **Email Service**: Sends email notifications as part of the notification workflow.
+
+### File Structure
+
+- `change_streams.py`: This file contains the Flask application that handles receiving flight updates from the Kafka topic and notifying users via email and SMS.
+- `notify_users.py`: This file handles the MongoDB change stream and sends relevant flight updates to a Kafka topic.
+
+### How It Works
+
+#### Backend Service (`change_streams.py`)
+
+1. **Flask Setup**: The Flask app is set up with CORS enabled for the `/update` endpoint.
+2. **MongoDB Connection**: Connects to MongoDB to access the flight status and user information.
+3. **Twilio Setup**: Configures Twilio for sending SMS notifications.
+4. **Email Function**: Defines a function to send email notifications using SMTP.
+5. **SMS Function**: Defines a function to send SMS notifications using Twilio.
+6. **Notification Function**: Combines email and SMS notifications and sends them to users based on flight updates.
+7. **Kafka Consumer**: Listens to the `flight_updates` topic on Kafka and processes messages to notify users.
+8. **API Endpoint**: Provides an endpoint to fetch the latest flight update.
+
+#### Kafka Producer (`notify_users.py`)
+
+1. **MongoDB Connection**: Connects to MongoDB to watch for changes in the flights collection.
+2. **Kafka Setup**: Configures Kafka producer to send messages to the `flight_updates` topic.
+3. **Process Change Function**: Processes the change stream from MongoDB and sends relevant updates to Kafka.
+4. **Change Stream Listener**: Listens to changes in the flights collection and processes them.
+
+### Running the Application
+
+1. **Start MongoDB**: Ensure MongoDB is running locally.
+2. **Start Kafka**: Ensure Kafka is running locally.
+3. **Run Kafka Producer**: 
+   ```sh
+   python producer.py
+   ```
+4. **Run Flask App**:
+   ```sh
+   python app.py
+   ```
+5. **Frontend**: Make API calls to the `/update` endpoint to fetch the latest flight updates.
+
+### Conclusion
+
+This notification microservice efficiently processes flight status updates and notifies users in real-time via email and SMS. The combination of MongoDB, Kafka, and Flask provides a robust and scalable solution for real-time notifications.
+
+---
+
+This README provides a clear overview of the architecture and the workflow, with references to the relevant files without including the entire code.
 ## Features
 
 - Real-time notification delivery
