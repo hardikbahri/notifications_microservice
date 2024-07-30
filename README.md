@@ -25,6 +25,9 @@ No need to reload the site, this microservice uses kafka and mongodb replica set
 ### Architecture
 ![image](https://github.com/user-attachments/assets/2ed8bb51-5d50-4a9d-bc56-70fbabbd0f5c)
 
+### API Calls
+![image](https://github.com/user-attachments/assets/6b4e3e6b-343b-484f-9f28-db3ccf3dc5b3)
+
 ### Flights collection in mongodb
 ![image](https://github.com/user-attachments/assets/9fa9e65b-92f5-46fc-a8fb-3d43f62c25ed)
 ### users database collection in mongodb
