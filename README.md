@@ -1,6 +1,4 @@
 # Notifications Microservice
-# Flight Info and Notifications Microservices
-
 This project manages and delivers real-time flight updates and notifications using a microservices architecture. The system is built with React for the frontend, Flask for the backend, MongoDB for data storage, and Kafka for real-time data streaming.
 
 ## Features
